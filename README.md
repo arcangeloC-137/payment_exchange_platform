@@ -31,5 +31,4 @@ Once everything is settled, you will be able to navigate the website. Here some 
 <div align="center"> <h3>Login page</h3> </div>
 
 ---
-<br>
-**A.Y. 2019/2020**
+<h4>A.Y. 2019/2020</h4>
