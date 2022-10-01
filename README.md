@@ -6,7 +6,6 @@ The simple exercise is based on pure **HTML**, **Javascript**, **PHP**, and **CS
 
 ```
 .
-├── benchmarking_vg
 └── htdocs
     └── files
         ├── confermaPagamento.php
