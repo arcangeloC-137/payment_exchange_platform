@@ -1,0 +1,927 @@
+body{
+  font-family: 'Helvetica', 'Arial', sans-serif;
+	font-size: 16px;
+  margin:0;
+	padding:0;
+}
+
+/* BODY PRINTABLE */
+
+@media print{
+
+  body{
+    font-size: 12pt;
+    font-family: 'Times', 'Times New Roman', serif;
+  }
+
+}
+
+/* HEADER */
+
+header{
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+  top: 0;
+  box-shadow: 0.2em 0.2em 1em grey;
+}
+
+/*NOME SITO*/
+
+.nomeSito{
+  color: #f4c400;
+  width: calc(100%/3);
+  display: flex;
+  padding-left: 10px;
+}
+
+.nomeSito img{
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  padding-left: 10px;
+}
+
+#thunderPrint{
+  display: none;
+}
+
+.nomeSito a{
+  color: #f4c400;
+  text-decoration: none;
+  display: flex;
+}
+
+/* BARRA DI NAVIGAZIONE */
+
+.btnNavbar{
+  display: flex;
+  width: calc(100%/3);
+  justify-content: center;
+}
+
+.btnNavbar ul{
+  list-style: none;
+  display: flex;
+  padding: 0;
+}
+
+.btnNavbar li{
+  padding-right: 5px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.btnNavbar li:hover{
+  border-bottom: 1px solid white;
+}
+
+.btnNavbar a{
+  color: white;
+  text-decoration: none;
+}
+
+.paginaCorrente{
+  border-bottom: 1px solid white;
+}
+
+/*DATI UTENTE*/
+
+.datiUtente{
+  padding-right: 10px;
+  width: calc(100%/3);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.datiUtente ul{
+  list-style: none;
+  padding: 0;
+}
+
+/* HEADER RESPONSIVE */
+
+@media screen and (max-width: 850px) {  /* Dimensione calcolata ispezionando la pagina*/
+
+  header{
+    flex-direction: column;
+  }
+
+  .paginaCorrente{
+    border-bottom: none;
+    border-left: 1px solid white;
+  }
+
+  .btnNavbar{
+    width: 100%;
+  }
+
+  .btnNavbar li{
+    padding-bottom: 10px;
+  }
+
+  .btnNavbar li:hover{
+    border-bottom: none;
+    border-left: 1px solid white;
+  }
+
+  .nomeSito{
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .btnNavbar ul{
+    flex-direction: column;
+  }
+
+  .btnNavbar li{
+    justify-content: center;
+  }
+
+  .datiUtente ul{
+    flex-direction: column;
+  }
+
+  .datiUtente{
+    width: 90%;
+  }
+
+  .datiUtente li{
+    font-size: 80%;
+  }
+
+}
+
+/* HEADER PRINTABLE */
+
+@media print{
+
+  header{
+    width: 100%;
+    justify-content: center;
+    font-size: 12pt;
+    font-family: 'Times', 'Times New Roman', serif;
+    box-shadow: none;
+    background: white;
+    color: black;
+  }
+
+  #thunder{
+    display: none;
+  }
+
+  #thunderPrint{
+    display: inherit;
+  }
+
+  .btnNavbar{
+    display: none;
+  }
+
+  .nomeSito{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+/* HOME */
+
+.labelPresentazione{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  padding-top: 50px;
+}
+
+#labelNoscript{
+  text-align: center;
+}
+
+.blocchiHome{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.blocchiHome img{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+
+}
+
+.blocchiHome h4{
+  text-align: center;
+}
+
+.blocchiHome a{
+  color: black;
+  text-decoration: none;
+}
+
+/* Box navigazione*/
+
+.bloccoLogin, .bloccoLog, .bloccoPaga{
+  width: calc(100%/5);
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+/* HOME RESPONSIVE */
+
+@media screen and (max-width: 850px){
+
+  .labelPresentazione{
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+
+  .blocchiHome{
+    flex-direction: column;
+  }
+
+  .bloccoLogin, .bloccoLog, .bloccoPaga{
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+  }
+
+}
+
+/* HOME PRINTABLE */
+
+@media  print{
+
+  .bloccoLogin, .bloccoLog, .bloccoPaga{
+    box-shadow: none;
+    border: 0.5pt solid black;
+  }
+
+}
+
+/* LOGIN */
+
+.bloccoAvvisoLoginForzato{
+  width: calc(100%*(3/5));
+  padding: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.bloccoAvvisoLoginForzato h3{
+  text-align: center;
+}
+
+.bloccoAvvisoLoginForzato a{
+  color: black;
+}
+
+.labelLogin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.labelLogin h4{
+  margin: 0;
+}
+
+.paginaLogin{
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+.bloccoAutenticazione{
+  width: 60%;
+  justify-content: center;
+  box-shadow: 0.3em 0.3em 1em grey;
+  display: flex;
+  flex-direction: column;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.inputLogin input{
+  border-radius: 4px;
+  border-style: solid;
+  border-color: grey;
+}
+
+.btnAutenticazione{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 25%;
+  margin-right: 25%;
+  justify-content: space-between;
+}
+
+.btnAutenticazione input{
+  background-color: white;
+  color: grey;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid;
+  width:40%;
+  font-size: 60%;
+}
+
+.btnAutenticazione input:hover {
+  background-color: grey;
+  color: white;
+}
+
+.inputLogin h4{
+  display: flex;
+  justify-content: center;
+}
+
+/* LOGIN RESPONSIVE */
+
+@media screen and (max-width: 850px){
+
+  .btnAutenticazione, .labelLogin, .bloccoAutenticazione{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .bloccoAutenticazione{
+    width: 90%;
+  }
+
+}
+
+/* LOGIN PRINTABLE */
+
+@media print {
+
+  .bloccoAutenticazione, .bloccoAvvisoLoginForzato{
+    box-shadow: none;
+    border: 0.5pt solid black;
+  }
+
+}
+
+/* LOG */
+
+.bloccoAvvisoAutenticazioneLog{
+  width: calc(100%*(3/5));
+  padding: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.bloccoAvvisoAutenticazioneLog h3, h4{
+  text-align: center;
+  color: black;
+}
+
+.bloccoAvvisoAutenticazioneLog a{
+  color: black;
+}
+
+.bloccoLogUtenteLoggato{
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.labelLogUtenteLoggato h3{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.labelLogUtenteLoggatoPrint{
+  display: none;
+}
+
+.labelLogUtenteLoggatoPrint h3{
+  text-align: center;
+  padding-top: 10px;
+}
+
+.bloccoCerca{
+  display: flex;
+  padding-bottom: 20px;
+  margin-right: 20%;
+  margin-left: 20%;
+  width: 60%;
+}
+
+#btnCerca{
+  background-color: white;
+  color: grey;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid;
+  width:40%;
+  font-size: 70%;
+  margin: 10px;
+}
+
+#btnCerca:hover{
+  background-color: grey;
+  color: white;
+}
+
+.bloccoCerca select{
+  background-color: white;
+  color: grey;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid;
+  width:30%;
+  margin: 8px;
+  text-align: center;
+}
+
+#tabellaPagamentiLog{
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 40px;
+}
+
+#tabellaPagamentiLog td, th{
+  text-align: left;
+  padding: 8px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+/* LOG RESPONSIVE */
+
+@media screen and (max-width: 850px){
+
+  #tabellaPagamentiLog{
+    margin-bottom: 40px;
+    width: 90%;
+    border-collapse: collapse;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 50%;
+  }
+
+  .bloccoCerca{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0%;
+  }
+
+  .bloccoCerca select, #btnCerca{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .labelLogUtenteLoggato h3{
+    padding-right: 8px;
+    padding-left: 8px;
+    font-size: 80%;
+  }
+
+}
+
+/* LOG PRINTABLE */
+
+@media print {
+
+  .bloccoAvvisoAutenticazioneLog, .bloccoLogUtenteLoggato{
+    box-shadow: none;
+  }
+
+  .labelLogUtenteLoggato, .bloccoCerca{
+    display: none;
+  }
+
+  .labelLogUtenteLoggatoPrint{
+    display: contents;
+  }
+
+  #tabellaPagamentiLog tr{
+    page-break-after: auto;
+  }
+
+}
+/* PAGA */
+
+.labelPaga{
+  justify-content: center;
+  display: flex;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.labelPaga a{
+  color: black;
+}
+
+.bloccoPagaUtenteNonLogato{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 40px;
+}
+
+.bloccoPagaUtenteNonLogato img{
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: flex;
+  margin: auto;
+}
+
+.bloccoPagaUtenteNonLogato h4{
+  text-align: center;
+}
+
+.bloccoPagaNumeroNegozi, .bloccoPagaNumeroUtenti{
+  width: calc(100%/4);
+  padding: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.bloccoPagamentoUtenteLoggato{
+  width: calc(100%*(3/5));
+  padding: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.bloccoPagamentoUtenteLoggato input{
+  border-radius: 4px;
+  border-style: solid;
+  border-color: grey;
+  max-width: 100%;
+}
+
+.labelPagamentoUtenteLoggato, .labelPagamentoUtenteLoggatoPrint{
+  text-align: center;
+}
+
+.labelPagamentoUtenteLoggatoPrint{
+  display: none;
+}
+
+#tabellaDestinatari{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tabellaDestinatari td, th{
+  text-align: left;
+  padding: 8px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.righeTabella{
+  background-color: #f2f2f2;
+}
+
+.righeTabella:hover{
+  background-color: #f4c400;
+}
+
+.inputSommaPagamento{
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.inputSommaPagamento input{
+  background-color: white;
+  color: grey;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid;
+  width:40%;
+  font-size: 70%;
+  margin: 8px;
+}
+
+.btnProcedi:hover {
+  background-color: grey;
+  color: white;
+}
+
+.inputProcediPagamento{
+  display: flex;
+  justify-content: center;
+}
+
+.inputProcediPagamento input{
+  background-color: white;
+  color: grey;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid;
+  width:40%;
+  font-size: 70%;
+  margin: 8px;
+}
+
+/* PAGA RESPONSIVE */
+
+@media screen and (max-width: 850px){
+
+  .labelPaga{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .bloccoPagaUtenteNonLogato{
+    flex-direction: column;
+  }
+
+  .bloccoPagaUtenteNonLogato h4{
+    text-align: center;
+  }
+
+  .bloccoPagaNumeroNegozi, .bloccoPagaNumeroUtenti{
+    padding-right: 10%;
+    padding-left: 10%;
+    width: 60%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 40px;
+  }
+
+  .bloccoPagaUtenteNonLogato img{
+    width: 120px;
+    height: 120px;
+  }
+
+  .labelPagamentoUtenteLoggato{
+    font-size: 80%;
+  }
+
+  .bloccoPagamentoUtenteLoggato{
+    width: 80%;
+  }
+
+  .bloccoPagamentoUtenteLoggato, .inputPagamento{
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}
+
+/* PAGA PRINTABLE */
+
+@media print {
+
+  .bloccoPagaNumeroNegozi, .bloccoPagaNumeroUtenti, .bloccoPagamentoUtenteLoggato{
+    box-shadow: none;
+    border: 0.5pt solid black;
+  }
+
+  .labelPagamentoUtenteLoggato, .inputSommaPagamento, .inputProcediPagamento, .utenteSelezionato{
+    display: none;
+  }
+
+  .labelPagamentoUtenteLoggatoPrint{
+    display: contents;
+  }
+
+}
+
+/* LOGOUT */
+.bloccoAvvisoLogoutForzato{
+  width: calc(100%*(3/5));
+  padding: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.bloccoAvvisoLogoutForzato h3{
+  text-align: center;
+}
+
+.bloccoAvvisoLogoutForzato a{
+  color: black;
+}
+
+/* LOGOUT PRINTABLE */
+
+@media print {
+
+  .bloccoAvvisoLogoutForzato{
+    box-shadow: none;
+    border: 0.5pt solid black;
+  }
+
+}
+
+/* CONFERMA PAGAMENTO */
+
+.bloccoConfermaPagamento{
+  width: calc(100%*(3/5));
+  padding: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3em 0.3em 1em grey;
+
+}
+
+.labelPagamentoConSuccesso h2{
+  text-align: center;
+}
+
+#tabellaConfermaPagamento{
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+}
+
+#tabellaConfermaPagamento td{
+  text-align: left;
+  padding: 8px;
+}
+
+.btnTornaAlLog{
+  display: flex;
+  justify-content: center;
+}
+
+.btnTornaAlLog input{
+  background-color: white;
+  color: grey;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid;
+  width:40%;
+  font-size: 70%;
+  margin: 8px;
+}
+
+.btnTornaAlLog input:hover{
+  background-color: grey;
+  color: white;
+}
+
+.bloccoAvvisoConfermaPagamento{
+  width: calc(100%*(3/5));
+  padding: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+
+.bloccoAvvisoConfermaPagamento h3{
+  text-align: center;
+}
+
+.bloccoAvvisoConfermaPagamento a{
+  color: black;
+}
+
+/* CONFERMA PAGAMENTO RESPONSIVE */
+
+@media screen and (max-width: 850px){
+
+  .bloccoConfermaPagamento{
+    padding: 4px;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 90%;
+    font-size: 80%;
+  }
+
+}
+/* CONFERMA PAGAMENTO PRINTABLE */
+
+@media print {
+
+  .bloccoConfermaPagamento{
+    box-shadow: none;
+    border: 0.5pt solid black;
+  }
+
+  .btnTornaAlLog{
+    display: none;
+  }
+
+}
+
+/* FOOTER */
+
+footer{
+  display: flex;
+  background-color: black;
+  font-size: 10px;
+  color: white;
+  margin-top: 40px;
+  width: 100%;
+  box-shadow: 0.2em 0.2em 1em grey;
+}
+
+.infoFooter ul{
+  list-style: none;
+}
+
+.infoFooter li{
+  padding-right: 5px;
+  padding: 5px;
+}
+
+/* FOOTER PRINTABLE */
+
+@media print{
+
+  footer{
+    box-shadow: none;
+    font-family: 'Times', 'Times New Roman', serif;
+    font-size: 12pt;
+    color: black;
+    background: white;
+  }
+
+}
+
+/* ERRORE DB */
+
+.xdebug-error{ /*nome della classe trovato attraverso l'ispezione della pagina*/
+  display: none; /*non mostro i warning per un aspetto estetico, rendendo visibili solo gli avvisi posti da me*/
+}
+
+.erroreDB{
+  width: calc(100%*(3/5));
+  padding: 5%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: inline-block;
+  box-shadow: 0.3em 0.3em 1em grey;
+}
+.erroreDB h1{
+  text-align: center;
+  color: black;
+}
+
+/* ERRORE QUERY */
+
+#erroreQuery{
+  text-align: center;
+  color: red;
+}
