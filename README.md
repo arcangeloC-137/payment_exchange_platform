@@ -30,5 +30,8 @@ Once everything is settled, you will be able to navigate the website. Here some 
 ![Screenshot 2022-10-01 at 16 51 56](https://user-images.githubusercontent.com/91372049/193415908-8af1528d-a4d6-4839-8126-d5674cb72d69.png)
 <div align="center"> <h3>Login page</h3> </div>
 
+<br>
+![Screenshot 2022-10-01 at 17 43 26](https://user-images.githubusercontent.com/91372049/193417416-13f104e3-8370-4473-8156-c50e056a0d30.png)
+<div align="center"> <h3>Payment page</h3> </div>
 ---
 <h4>A.Y. 2019/2020</h4>
