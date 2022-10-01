@@ -2,7 +2,7 @@
 
 This repository contains the code for the final project of the course ***Design of Web Services and Computer Networks***. A **PHP** based website to manage an electronic payment platform which allows the user to login, exchange money with other registered users, and check a log page with all his transactions. Everything is made **responsive** in order to adapt to every type of device.
 
-The simple exercise is based on pure **HTML**, **Javascript**, **PHP**, and **CSS**, without the usage of any libraries. In order to run locally the application, download the [XAMPP](https://www.apachefriends.org/index.html) environment, and add all the files under the the **htdocs** folder as follows:
+Goal of this project is to demonstrate a comprehensive and deep knowledge of the basis of **HTML**, **Javascript**, **PHP**, and **CSS**, without the help of any library. In order to run locally the application, download the [XAMPP](https://www.apachefriends.org/index.html) environment, and add all the files under the the **htdocs** folder as follows:
 
 ```
 .
